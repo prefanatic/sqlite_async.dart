@@ -1,0 +1,16 @@
+name: sqlite_diagnostic
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: ^3.13.4
+dependencies:
+  flutter:
+    sdk: flutter
+  sqlite3: 3.5.2
+  sqlite3_connection_pool: 0.2.12
+  sqlite_async:
+    path: ../..
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
