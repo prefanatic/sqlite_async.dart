@@ -8,10 +8,10 @@ import 'package:sqlite_async/native.dart';
 import 'package:sqlite_async/sqlite_async.dart';
 
 const _channel = MethodChannel('sqlite_diagnostic');
+const _sqliteOptions = SqliteOptions(maxReaders: 2);
 
 final class TestFactory extends NativeSqliteOpenFactory {
-  TestFactory(String path)
-    : super(path: path, sqliteOptions: const SqliteOptions(maxReaders: 2));
+  TestFactory(String path) : super(path: path, sqliteOptions: _sqliteOptions);
 
   @override
   sqlite.Database openNativeConnection(SqliteOpenOptions options) {
